@@ -1,5 +1,9 @@
 const environment = import.meta.env.MODE;
-export const apiBaseUrl = "http://13.232.123.0/shams-api";
+export const apiBaseUrl =
+  environment === "development"
+    ? "http://localhost:8000"
+    : // ?"http://18.233.160.251:8001"
+      "https://lms-shams-node.onrender.com";
 
 export const ADMIN = "/admin";
 export const API_VERSION = "/api/v1";
