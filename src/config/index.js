@@ -1,5 +1,5 @@
 const environment = import.meta.env.MODE;
-export const apiBaseUrl = "http://13.232.123.0/shams-api/";
+export const apiBaseUrl = "http://13.232.123.0/shams-api";
 
 export const ADMIN = "/admin";
 export const API_VERSION = "/api/v1";
