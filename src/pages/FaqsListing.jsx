@@ -77,7 +77,7 @@ const FaqsListing = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteFaqServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Faq deleted successfully!");
         fetchFaqs(pagination.pageIndex, pagination.pageSize);
       } else {

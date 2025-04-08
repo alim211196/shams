@@ -77,7 +77,7 @@ const BlogsListing = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteBlogServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Blog deleted successfully!");
         fetchBlogs(pagination.pageIndex, pagination.pageSize);
       } else {

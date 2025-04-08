@@ -24,4 +24,8 @@ export const store = configureStore({
     user: userReducer,
     settings: cacheReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false, // 🚫 Disable serializable check
+    }),
 });

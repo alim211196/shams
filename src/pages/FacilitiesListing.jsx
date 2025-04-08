@@ -87,7 +87,7 @@ const FacilitiesListing = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteFacilityServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Facility deleted successfully!");
         fetchFacilities(pagination.pageIndex, pagination.pageSize);
       } else {

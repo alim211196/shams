@@ -87,7 +87,7 @@ const AmenitiesListing = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteAmenityServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Amenity deleted successfully!");
         fetchAmenities(pagination.pageIndex, pagination.pageSize);
       } else {

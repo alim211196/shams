@@ -439,21 +439,21 @@ const CourseForm = ({
       let response = "";
       if (sectionTabValue === 0) {
         response = await deleteCourseQuizServiceById(id);
-        if (response.statusText === "OK") {
+        if (response.status === 200) {
           toast.success("Quiz deleted successfully!");
           fetchCourseSections(pagination.pageIndex, pagination.pageSize);
           fetchCourseQuiz();
         }
       } else if (sectionTabValue === 1) {
         response = await deleteCourseLectureServiceById(id);
-        if (response.statusText === "OK") {
+        if (response.status === 200) {
           toast.success("content deleted successfully!");
           fetchCourseSections(pagination.pageIndex, pagination.pageSize);
           fetchCourseLecture();
         }
       } else {
         response = await deleteCourseContentServiceById(id);
-        if (response.statusText === "OK") {
+        if (response.status === 200) {
           toast.success("content deleted successfully!");
           fetchCourseSections(pagination.pageIndex, pagination.pageSize);
           fetchCourseContent();
@@ -531,7 +531,7 @@ const CourseForm = ({
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteCourseSectionServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Section deleted successfully!");
         fetchCourseSections(pagination.pageIndex, pagination.pageSize);
       } else {

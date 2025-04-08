@@ -74,7 +74,7 @@ const PagesListing = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteWebPageServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Page deleted successfully!");
         fetchPages(pagination.pageIndex, pagination.pageSize);
       } else {

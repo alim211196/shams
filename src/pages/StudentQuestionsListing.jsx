@@ -81,7 +81,7 @@ const StudentQuestionsListing = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteStudentQuestionServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Question deleted successfully!");
         fetchQuestions(pagination.pageIndex, pagination.pageSize);
       } else {

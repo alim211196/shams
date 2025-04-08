@@ -86,7 +86,7 @@ const SpaceTypesListing = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteSpaceTypeServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("space type deleted successfully!");
         fetchSpaceTypes(pagination.pageIndex, pagination.pageSize);
       } else {

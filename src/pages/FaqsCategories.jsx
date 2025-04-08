@@ -80,7 +80,7 @@ const FaqsCategories = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteFaqCategoryServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Faq category deleted successfully!");
         fetchFaqCategory(pagination.pageIndex, pagination.pageSize);
       } else {

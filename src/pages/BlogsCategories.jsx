@@ -84,7 +84,7 @@ const BlogsCategories = () => {
   const handleDeleteConfirm = async (id) => {
     try {
       const response = await deleteBlogCategoryServiceById(id);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         toast.success("Blog category deleted successfully!");
         fetchBlogCategory(pagination.pageIndex, pagination.pageSize);
       } else {
