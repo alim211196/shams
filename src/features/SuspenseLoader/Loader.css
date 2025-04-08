@@ -1,0 +1,22 @@
+.loader {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  border-radius: 50%;
+  background: #021340; /* Updated to primary theme color */
+  animation: wave 1s ease-in infinite;
+}
+
+@keyframes wave {
+  0% {
+    box-shadow: 0 0 0 0px rgba(2, 19, 64, 1),
+      /* Primary color with full opacity */ 0 0 0 20px rgba(2, 19, 64, 0.2),
+      0 0 0 40px rgba(2, 19, 64, 0.6), 0 0 0 60px rgba(2, 19, 64, 0.4),
+      0 0 0 80px rgba(2, 19, 64, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 80px rgba(2, 19, 64, 0), 0 0 0 60px rgba(2, 19, 64, 0.2),
+      0 0 0 40px rgba(2, 19, 64, 0.4), 0 0 0 20px rgba(2, 19, 64, 0.6),
+      0 0 0 0px rgba(2, 19, 64, 1);
+  }
+}
