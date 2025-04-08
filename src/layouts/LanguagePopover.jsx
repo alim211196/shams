@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const LanguagePopover = () => {
   const { languages } = useSelector((state) => state.languages); // Fetch languages from redux
   const [anchorElLang, setAnchorElLang] = useState(null);
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[1] || {}); // Default to English (languages[1])
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[0] || {}); // Default to English (languages[1])
 
   const open = Boolean(anchorElLang);
 
