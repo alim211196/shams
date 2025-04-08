@@ -48,7 +48,7 @@ const LanguageTabs = ({ handleChange, activeLang, children }) => {
           aria-label="full width tabs example"
         >
           {Array.isArray(languages) &&
-            languages.map((lang, idx) => (
+            languages.reverse().map((lang, idx) => (
               <Tab
                 key={lang._id}
                 value={idx}
