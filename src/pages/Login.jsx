@@ -14,7 +14,6 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { MailOutline, Visibility, VisibilityOff } from "@mui/icons-material";
-import loginLogo from "../assets/LogoContainer.png";
 import graphicImg from "../assets/graphicImages.jpeg";
 import { loginService } from "../services/staffService";
 import { toast } from "react-toastify";
@@ -68,7 +67,7 @@ export default function SignInSide() {
           }}
         >
           <Box sx={{ width: "150px" }}>
-            <img src={loginLogo} alt="Logo" />
+            <img src={"/LogoContainer.png"} alt="Logo" />
           </Box>
           <Typography
             component="h2"
@@ -89,7 +88,7 @@ export default function SignInSide() {
               src={
                 authData?.banner_image
                   ? getS3ImageUrl("auth_page", authData?.banner_image)
-                  : graphicImg
+                  : "/graphicImages.jpeg"
               }
               alt="Graphic"
               style={{ width: "300px" }}
@@ -111,7 +110,7 @@ export default function SignInSide() {
         >
           {isMobile && (
             <Box sx={{ textAlign: "center" }}>
-              <img src={loginLogo} alt="Logo" />
+              <img src={"/logo-login.png"} alt="Logo" />
             </Box>
           )}
 

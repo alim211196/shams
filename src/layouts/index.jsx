@@ -73,7 +73,7 @@ export default function MiniDrawer({ children }) {
           <Box component="div" sx={{ flexGrow: 1 }}>
             {!open && (
               <img
-                src="/src/assets/logo-login.png"
+                src="/logo-login.png"
                 alt="Company Logo"
                 style={{ height: "auto", width: "80px" }}
               />
@@ -106,7 +106,7 @@ export default function MiniDrawer({ children }) {
           <DrawerHeader>
             {open && (
               <img
-                src="/src/assets/logo-login.png"
+                src="/logo-login.png"
                 alt="Company Logo"
                 style={{ height: "auto", width: "80px" }}
               />
@@ -119,7 +119,7 @@ export default function MiniDrawer({ children }) {
           <DrawerHeader>
             {open && (
               <img
-                src="/src/assets/logo-login.png"
+                src="/logo-login.png"
                 alt="Company Logo"
                 style={{ height: "auto", width: "80px" }}
               />
