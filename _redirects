@@ -1,1 +1,5 @@
-/*    /index.html   200
+# 👇 Proxy API requests securely through Netlify
+/api/*   http://13.232.123.0/shams-api/:splat   200
+
+# 👇 Keep your existing catch-all rule for frontend routing
+/*       /index.html   200
