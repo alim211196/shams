@@ -21,7 +21,7 @@ const LanguagePopover = () => {
     <>
       <IconButton color="inherit" onClick={handleOpenLangMenu}>
         <img
-          src={selectedLanguage.flag || "/src/assets/united-states.png"} // Use the flag from the data
+          src={selectedLanguage.flag || "/united-states.png"} // Use the flag from the data
           alt={selectedLanguage.name}
           width={24} // Adjust image width
           height={20} // Adjust image height
